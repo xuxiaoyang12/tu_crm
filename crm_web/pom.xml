@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>crm_parent</artifactId>
+        <groupId>com.kaishengit</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../crm_parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>crm_web</artifactId>
+    <packaging>pom</packaging>
+    <name>crm_web Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>../crm_entity</module>
+        <module>../crm_util</module>
+        <module>../crm_service</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>crm_web</finalName>
+        <plugins>
+            <!--tomcat插件-->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+            </plugin>
+            <!--编译插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
